@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 7730680370806869806}
   - component: {fileID: 7730680370806869807}
   - component: {fileID: 7730680370806869803}
-  - component: {fileID: 7730680370806869800}
   - component: {fileID: 7730680370806869815}
-  - component: {fileID: 7730680370806869812}
   - component: {fileID: 7730680370806869814}
   - component: {fileID: 7730680370806869802}
   - component: {fileID: 2057071549394881896}
   - component: {fileID: 3750882975830750475}
   - component: {fileID: 3114136352503301214}
+  - component: {fileID: 7630832449014037245}
+  - component: {fileID: 542711049518872505}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -135,32 +135,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &7730680370806869800
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7730680370806869804}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1ad29695a53ef314782ec032dc865005, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.13229823}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7640555, y: 0.52380323}
-  m_EdgeRadius: 0
 --- !u!114 &7730680370806869815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +156,8 @@ MonoBehaviour:
     m_Bits: 3959
   m_GroundCheck: {fileID: 7730680371715484535}
   m_CeilingCheck: {fileID: 7730680371188589262}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_MainCollider: {fileID: 7630832449014037245}
+  m_CrouchCollider: {fileID: 542711049518872505}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -201,22 +176,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!58 &7730680370806869812
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7730680370806869804}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1ad29695a53ef314782ec032dc865005, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.11}
-  serializedVersion: 2
-  m_Radius: 0.38009298
 --- !u!114 &7730680370806869814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,8 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa3e0f579823754785b74e7d4bbf814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  currentLevelIndex: 0
 --- !u!114 &3750882975830750475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +229,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b68b03744bee34aa81174c219d0bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fillBar: {fileID: 0}
+  health: 0
+  currentLevelIndex: 0
+  isDead: 0
+  sDamage: 25
 --- !u!114 &3114136352503301214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +251,38 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   livesRemaining: 0
+--- !u!70 &7630832449014037245
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730680370806869804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 1ad29695a53ef314782ec032dc865005, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03374043, y: -0.050152272}
+  m_Size: {x: 0.73903114, y: 0.91971797}
+  m_Direction: 0
+--- !u!70 &542711049518872505
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730680370806869804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 1ad29695a53ef314782ec032dc865005, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.034450233, y: -0.13779962}
+  m_Size: {x: 0.7416258, y: 0.7416258}
+  m_Direction: 0
 --- !u!1 &7730680371188589263
 GameObject:
   m_ObjectHideFlags: 0

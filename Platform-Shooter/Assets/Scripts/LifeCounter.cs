@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifeCounter : MonoBehaviour
 {
@@ -10,8 +11,7 @@ public class LifeCounter : MonoBehaviour
 
     public void LoseLife()
     {
-        if (livesRemaining == 0)
-            return;
+
         //Decrease the value of livesRemmaining
         livesRemaining--;
         //Hide one of the life images
@@ -21,12 +21,14 @@ public class LifeCounter : MonoBehaviour
         if(livesRemaining == 0)
         {
             Debug.Log("You Lose");
+
         }
     }
 
-    public void Update (bool isDead)
+    public void IsDead(bool isDead)
     {
         if (isDead == true)
             LoseLife();
     }
+
 }

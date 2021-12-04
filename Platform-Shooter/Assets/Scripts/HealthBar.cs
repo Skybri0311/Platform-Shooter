@@ -26,7 +26,7 @@ public class HealthBar : MonoBehaviour
         //Refresh the UI fill bar
         fillBar.fillAmount = health / 100;
         //Check if health is 0 or less
-        if(health<=0)
+        if(health==0)
         {
             Debug.Log("You Die");
             Die();
@@ -35,10 +35,13 @@ public class HealthBar : MonoBehaviour
     void Die()
     {
         isDead = true;
-        lifeCounter.Update(isDead);
+        lifeCounter.IsDead(isDead = true);
         isDead = false;
+        lifeCounter.IsDead(isDead = false);
         health = 100;
-        //Destroy(gameObject);
+        fillBar.fillAmount = health;
+        //Reset player to start position
+        
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
