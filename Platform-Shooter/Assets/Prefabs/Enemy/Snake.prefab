@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1992219020082449764}
   - component: {fileID: 1992219020082449767}
   - component: {fileID: 1992219020082449766}
+  - component: {fileID: 8837253442170020711}
   m_Layer: 7
   m_Name: Snake
   m_TagString: Untagged
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.027858585}
+  m_Offset: {x: -0.003339909, y: -0.021385707}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14537385, y: 0.104282826}
+  m_Size: {x: 0.14918526, y: 0.11772725}
   m_EdgeRadius: 0
 --- !u!114 &1992219020082449766
 MonoBehaviour:
@@ -143,4 +144,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  dDamage: 25
   deathEffect: {fileID: 3237838100639136048, guid: fce29e2a682550b439608cdc3eb6ce8c, type: 3}
+--- !u!114 &8837253442170020711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992219020082449785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af06af06db3d0c246a726d75cf191954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  nextID: 0
+  speed: 2

@@ -17,6 +17,9 @@ GameObject:
   - component: {fileID: 7730680370806869812}
   - component: {fileID: 7730680370806869814}
   - component: {fileID: 7730680370806869802}
+  - component: {fileID: 2057071549394881896}
+  - component: {fileID: 3750882975830750475}
+  - component: {fileID: 3114136352503301214}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -243,6 +246,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7730680372381741607}
   shotPrefab: {fileID: 7301380795520497602, guid: 32ba88a939414a14abea358d9596768c, type: 3}
+--- !u!114 &2057071549394881896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730680370806869804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa3e0f579823754785b74e7d4bbf814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  currentLevelIndex: 0
+--- !u!114 &3750882975830750475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730680370806869804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b68b03744bee34aa81174c219d0bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3114136352503301214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730680370806869804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6173fc10316ea4cab2cdac928208c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  livesRemaining: 0
 --- !u!1 &7730680371188589263
 GameObject:
   m_ObjectHideFlags: 0
