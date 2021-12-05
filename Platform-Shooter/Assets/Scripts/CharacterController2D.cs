@@ -58,7 +58,20 @@ public class CharacterController2D : MonoBehaviour
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
-		}
+
+			//Check if any of the colliders are moving platform
+			//Parent it to this transform
+			foreach (var c in colliders)
+			{
+				if (c.tag == "MovingPlatform")
+					transform.parent = c.transform;
+				else
+				{
+					//Unparent the transform
+					transform.parent = null;
+				}
+			}
+		}  
 	}
 
 

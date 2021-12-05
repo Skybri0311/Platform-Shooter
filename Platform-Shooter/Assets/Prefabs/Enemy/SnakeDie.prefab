@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3237838100639136055}
   - component: {fileID: 2581668983328078486}
   m_Layer: 0
-  m_Name: Clean-Retro-Lines-Enemies_48
+  m_Name: SnakeDie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
