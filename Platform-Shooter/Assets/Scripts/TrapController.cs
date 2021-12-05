@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class TrapController : MonoBehaviour
 {
-    public int curretltLevelIndex;
     public LevelController levelController;
     public LifeCounter lifeCounter;
 
