@@ -217,6 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa3e0f579823754785b74e7d4bbf814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 7730680370806869803}
+  startPosition: {x: 0, y: 0}
 --- !u!114 &3750882975830750475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +233,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillBar: {fileID: 0}
   health: 0
-  currentLevelIndex: 0
   isDead: 0
   sDamage: 25
 --- !u!114 &3114136352503301214
@@ -251,6 +252,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   livesRemaining: 0
+  gameOver: 0
 --- !u!70 &7630832449014037245
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

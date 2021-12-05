@@ -5,15 +5,43 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+    public int mainMenuIndex;
+    public int currentLevel;
     public int nextLevelIndex;
-    //public string levelName;
+    public int firstLevel;
+    private Player player;
 
-    void OnTriggerEnter2D(Collider2D other)
+
+    private void Awake()
     {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(nextLevelIndex);
-            //SceneManager.LoadScene(levelName);
-        }
+        player = FindObjectOfType<Player>();
     }
+
+    public void Respawn()
+    {
+        player.rb.position = player.startPosition;
+
+    }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene(currentLevel);
+    }
+
+    public void NextLevel()
+    {
+        Debug.Log("Go To Level" + nextLevelIndex);
+        SceneManager.LoadScene(nextLevelIndex);
+    }
+
+    public void NewGame()
+    {
+        SceneManager.LoadScene(firstLevel);
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuIndex);
+    }
+
 }

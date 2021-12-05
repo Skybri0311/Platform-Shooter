@@ -7,15 +7,16 @@ public class HealthBar : MonoBehaviour
 {
     public Image fillBar;
     public float health;
-    public int currentLevelIndex;
     public bool isDead = false;
     public int sDamage = 25;
+    
     private LifeCounter lifeCounter;
+    private LevelController levelController;
 
     private void Awake()
     {
-        lifeCounter = GameObject.FindObjectOfType<LifeCounter>();
-            
+        lifeCounter = FindObjectOfType<LifeCounter>();
+        levelController = FindObjectOfType<LevelController>();
     }
 
     public void LoseHealth()
@@ -34,13 +35,16 @@ public class HealthBar : MonoBehaviour
     }
     void Die()
     {
+        //set the is dead bool in HealthBar script and in LifeCounter scipt
         isDead = true;
         lifeCounter.IsDead(isDead = true);
         isDead = false;
         lifeCounter.IsDead(isDead = false);
+        //Reset health to 100 and reset the fill to the new health
         health = 100;
         fillBar.fillAmount = health;
-        //Reset player to start position
+        //Reset player to start position do not reset level
+        levelController.Respawn();
         
     }
     void OnTriggerEnter2D(Collider2D hitInfo)

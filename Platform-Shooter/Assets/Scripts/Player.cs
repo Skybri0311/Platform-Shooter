@@ -1,9 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    //Save player position of other scripts to use
+    public Rigidbody2D rb;
+    public Vector2 startPosition;
+    private void Awake()
+    {
+        rb = FindObjectOfType<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+       startPosition = rb.position;
+    }
+
 }
