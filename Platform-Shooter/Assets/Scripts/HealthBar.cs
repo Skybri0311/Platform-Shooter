@@ -55,5 +55,12 @@ public class HealthBar : MonoBehaviour
             LoseHealth();
         }
         Debug.Log(hitInfo.name);
+
+        LifeGem lifegem = hitInfo.GetComponent<LifeGem>();
+        if (lifegem != null)
+        {
+            lifeCounter.AddLife();
+        }
+        Debug.Log(hitInfo.name);
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelController : MonoBehaviour
 {
     public int mainMenuIndex;
+    public int deathMenuIndex;
     public int currentLevel;
     public int nextLevelIndex;
     public int firstLevel;
@@ -42,6 +43,10 @@ public class LevelController : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(mainMenuIndex);
+    }
+    public void DeathMenu()
+    {
+        SceneManager.LoadScene(deathMenuIndex);
     }
 
 }

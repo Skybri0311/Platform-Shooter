@@ -14,6 +14,11 @@ public class LifeCounter : MonoBehaviour
     {
         levelController = FindObjectOfType<LevelController>();
     }
+    public void IsDead(bool isDead)
+    {
+        if (isDead == true)
+            LoseLife();
+    }
 
     public void LoseLife()
     {
@@ -23,19 +28,29 @@ public class LifeCounter : MonoBehaviour
         //Hide one of the life images
         lives[livesRemaining].enabled = false;
 
-        //If we run out of lives we loose the game
+        //If player run out of lives we loose the game
         if(livesRemaining == 0)
         {
             Debug.Log("You Lose");
             gameOver = true;
-            levelController.Reload();
+            levelController.DeathMenu();
         }
     }
 
-    public void IsDead(bool isDead)
+    public void AddLife()
     {
-        if (isDead == true)
-            LoseLife();
+        //Increase value of livesRemaining
+        livesRemaining ++;
+        //Show one of the hidden life images
+        lives[livesRemaining].enabled = true;
+        //if player lives are full do nothing
+        if(livesRemaining == 3)
+        {
+            Debug.Log("Lives Full");
+            return;
+        }
     }
+
+
 
 }
