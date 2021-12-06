@@ -39,16 +39,19 @@ public class LifeCounter : MonoBehaviour
 
     public void AddLife()
     {
-        //Increase value of livesRemaining
-        livesRemaining ++;
-        //Show one of the hidden life images
-        lives[livesRemaining].enabled = true;
         //if player lives are full do nothing
-        if(livesRemaining == 3)
+        if (livesRemaining == 3)
         {
+
             Debug.Log("Lives Full");
             return;
         }
+        //Increase value of livesRemaining
+        livesRemaining ++;
+        Debug.Log("Life Added");
+        //Show one of the hidden life images
+        lives[livesRemaining -1].enabled = true;
+
     }
 
 

@@ -26,9 +26,9 @@ public class AIPatrol : MonoBehaviour
         Transform goalPoint = points[nextID];
         //flip the enemy transform to look into the points direction
         if (goalPoint.transform.position.x > transform.position.x)
-            transform.localScale = new Vector3(-8, 8, 6);
+            transform.localScale = new Vector3(-1, 1, 1);
         else
-            transform.localScale = new Vector3(8, 8, 6);
+            transform.localScale = new Vector3(1, 1, 1);
         //move the enemy towards the goal point
         transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, speed * Time.deltaTime);
         //check the distance between enemy and goal point to trigger next point
