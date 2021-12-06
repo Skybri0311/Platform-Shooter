@@ -2286,7 +2286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
       propertyPath: deathMenuIndex
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
       propertyPath: nextLevelIndex

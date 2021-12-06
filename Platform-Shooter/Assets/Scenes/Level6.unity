@@ -6815,6 +6815,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: firstLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: currentLevel
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: deathMenuIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: nextLevelIndex
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
 --- !u!114 &290572271968581061 stripped
