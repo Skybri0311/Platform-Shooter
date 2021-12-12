@@ -1500,6 +1500,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fde28c8fc87b6b468e2054e8f1ecbc5, type: 3}
+--- !u!114 &321834648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2441465183865165646, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+  m_PrefabInstance: {fileID: 1643217874}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1794f771f49a12a4394c312314b67ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &328161018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314400147296728836, guid: a62a0aa120fa5d34f92630c5ed1fe736, type: 3}
@@ -1800,7 +1811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606104115444014523, guid: 4e53f19d0b8a5b94ab8788ad364ee14a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000023841858
+      value: 0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 6606104115444014523, guid: 4e53f19d0b8a5b94ab8788ad364ee14a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1858,7 +1869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8037470555144756568, guid: 31eebdcb47109eb47aa73973a8e60136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000023841858
+      value: 0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 8037470555144756568, guid: 31eebdcb47109eb47aa73973a8e60136, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4061,6 +4072,10 @@ PrefabInstance:
       propertyPath: startingTime
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2441465183865165646, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 2108885785}
     - target: {fileID: 3388269933054746392, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
       propertyPath: m_Camera
       value: 
@@ -4213,6 +4228,10 @@ PrefabInstance:
       propertyPath: currentLevel
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: scoreCounter
+      value: 
+      objectReference: {fileID: 321834648}
     - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
       propertyPath: deathMenuIndex
       value: 7

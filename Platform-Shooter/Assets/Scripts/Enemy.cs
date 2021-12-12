@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 
     public int health = 100;
     public int damage = 25;
+    public int points = 10;
 
     public Shot Shot;
     public GameObject deathEffect;

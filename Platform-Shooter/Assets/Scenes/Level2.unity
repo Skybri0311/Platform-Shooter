@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8037470555144756568, guid: 31eebdcb47109eb47aa73973a8e60136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000023841858
+      value: 0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 8037470555144756568, guid: 31eebdcb47109eb47aa73973a8e60136, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1037,7 +1037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606104115444014523, guid: 4e53f19d0b8a5b94ab8788ad364ee14a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000023841858
+      value: 0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 6606104115444014523, guid: 4e53f19d0b8a5b94ab8788ad364ee14a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3745,6 +3745,10 @@ PrefabInstance:
       propertyPath: startingTime
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2441465183865165646, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 1723794590}
     - target: {fileID: 3388269933054746392, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3894,6 +3898,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+      propertyPath: scoreCounter
+      value: 
+      objectReference: {fileID: 1723794592}
+    - target: {fileID: 7822858550914938657, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
       propertyPath: deathMenuIndex
       value: 7
       objectReference: {fileID: 0}
@@ -3967,6 +3975,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc7e7ade27001ec47a61eefce02b9878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1723794592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2441465183865165646, guid: 305cdc1a24e04834bb8013871b9af3b1, type: 3}
+  m_PrefabInstance: {fileID: 1723794585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1794f771f49a12a4394c312314b67ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1849930331 stripped

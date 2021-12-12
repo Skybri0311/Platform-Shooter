@@ -10,12 +10,16 @@ public class LevelController : MonoBehaviour
     public int currentLevel;
     public int nextLevelIndex;
     public int firstLevel;
+    public int savedScore;
     private Player player;
+    public ScoreCounter scoreCounter;
+    public LifeCounter lifeCounter;
 
 
     private void Awake()
     {
         player = FindObjectOfType<Player>();
+        scoreCounter = FindObjectOfType<ScoreCounter>();
     }
 
     public void Respawn()
@@ -31,21 +35,25 @@ public class LevelController : MonoBehaviour
 
     public void NextLevel()
     {
+        scoreCounter.SaveScore();
         Debug.Log("Go To Level" + nextLevelIndex);
         SceneManager.LoadScene(nextLevelIndex);
     }
 
     public void NewGame()
     {
+        scoreCounter.ResetScore();
         SceneManager.LoadScene(firstLevel);
     }
 
     public void BackToMainMenu()
     {
+        scoreCounter.ResetScore();
         SceneManager.LoadScene(mainMenuIndex);
     }
     public void DeathMenu()
     {
+        scoreCounter.ResetScore();
         SceneManager.LoadScene(deathMenuName);
     }
 

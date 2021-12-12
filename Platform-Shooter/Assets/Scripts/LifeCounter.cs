@@ -43,7 +43,6 @@ public class LifeCounter : MonoBehaviour
         //if player lives are full do nothing
         if (livesRemaining == 3)
         {
-
             Debug.Log("Lives Full");
             return;
         }
@@ -54,7 +53,4 @@ public class LifeCounter : MonoBehaviour
         lives[livesRemaining -1].enabled = true;
 
     }
-
-
-
 }

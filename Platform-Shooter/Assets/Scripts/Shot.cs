@@ -8,6 +8,13 @@ public class Shot : MonoBehaviour
     public int sDamage = 100;
     public Rigidbody2D rb;
 
+    public ScoreCounter scoreCounter;
+
+    private void Awake()
+    {
+        scoreCounter = FindObjectOfType<ScoreCounter>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +27,7 @@ public class Shot : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage();
+            scoreCounter.AddScore();
             Debug.Log("Took Hit");
         }
         Debug.Log(hitInfo.name);
