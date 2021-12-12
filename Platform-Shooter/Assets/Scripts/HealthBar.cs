@@ -8,21 +8,22 @@ public class HealthBar : MonoBehaviour
     public Image fillBar;
     public float health;
     public bool isDead = false;
-    public int sDamage = 25;
     
     private LifeCounter lifeCounter;
     private LevelController levelController;
+    private Enemy enemy_damage;
 
     private void Awake()
     {
         lifeCounter = FindObjectOfType<LifeCounter>();
         levelController = FindObjectOfType<LevelController>();
+        enemy_damage = FindObjectOfType<Enemy>();
     }
 
     public void LoseHealth()
     {
         //Reduce the health
-        health -= sDamage;
+        health -= enemy_damage.damage;
         Debug.Log("Health" + health);
         //Refresh the UI fill bar
         fillBar.fillAmount = health / 100;

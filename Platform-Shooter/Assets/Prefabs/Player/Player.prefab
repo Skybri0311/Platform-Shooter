@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 7730680370806869815}
   animator: {fileID: 7730680370806869807}
-  runSpeed: 40
+  runSpeed: 30
 --- !u!114 &7730680370806869802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +253,7 @@ MonoBehaviour:
   - {fileID: 0}
   livesRemaining: 0
   gameOver: 0
+  levelController: {fileID: 0}
 --- !u!70 &7630832449014037245
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         levelController.BackToMainMenu();
+        Resume();
     }
 
     public void QuitGame()

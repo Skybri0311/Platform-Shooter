@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damage: 25
+  Shot: {fileID: 4687776961014109734, guid: 32ba88a939414a14abea358d9596768c, type: 3}
   deathEffect: {fileID: 8986419290868616996, guid: ae0bc14d2863e3b4f975a36de3d44f37, type: 3}
 --- !u!114 &7612357312967424343
 MonoBehaviour:

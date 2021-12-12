@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shot : MonoBehaviour
 {
     public float speed = 20f;
-    public int damage = 40;
+    public int sDamage = 100;
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -19,7 +19,8 @@ public class Shot : MonoBehaviour
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage();
+            Debug.Log("Took Hit");
         }
         Debug.Log(hitInfo.name);
         Destroy(gameObject);

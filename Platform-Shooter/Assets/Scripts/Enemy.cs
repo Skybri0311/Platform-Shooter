@@ -7,12 +7,18 @@ public class Enemy : MonoBehaviour
 {
 
     public int health = 100;
+    public int damage = 25;
 
+    public Shot Shot;
     public GameObject deathEffect;
 
-    public void TakeDamage (int damage)
+    private void Awake()
     {
-        health -= damage;
+        Shot = GameObject.Find("Shot").GetComponent<Shot>();
+    }
+    public void TakeDamage()
+    {
+        health -= Shot.sDamage;
 
         if(health <= 0)
         {

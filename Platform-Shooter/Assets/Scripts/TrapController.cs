@@ -7,11 +7,13 @@ public class TrapController : MonoBehaviour
 {
     public LevelController levelController;
     public LifeCounter lifeCounter;
+    public Timer timer;
 
     private void Awake()
     {
         levelController = FindObjectOfType<LevelController>();
         lifeCounter = FindObjectOfType<LifeCounter>();
+        timer = FindObjectOfType<Timer>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -21,6 +23,7 @@ public class TrapController : MonoBehaviour
             Debug.Log("Trapped");
             lifeCounter.LoseLife();
             levelController.Respawn();
+            timer.ResetTimer();
         }
     }
 }

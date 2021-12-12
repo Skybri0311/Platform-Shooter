@@ -9,6 +9,7 @@ public class LifeCounter : MonoBehaviour
     public int livesRemaining;
     public bool gameOver = false;
     public LevelController levelController;
+    public bool isDead = false;
 
     private void Awake()
     {
