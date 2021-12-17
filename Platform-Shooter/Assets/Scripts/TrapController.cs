@@ -21,7 +21,6 @@ public class TrapController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             lifeCounter.LoseLife();
-            timer.ResetTimer();
             Debug.Log("Trapped");
             levelController.Respawn();
         }

@@ -19,7 +19,6 @@ public class LevelController : MonoBehaviour
     private void Awake()
     {
         player = FindObjectOfType<Player>();
-        scoreCounter = FindObjectOfType<ScoreCounter>();
     }
 
     public void Respawn()
@@ -42,7 +41,6 @@ public class LevelController : MonoBehaviour
 
     public void NewGame()
     {
-        scoreCounter.ResetScore();
         SceneManager.LoadScene(firstLevel);
     }
 
