@@ -27,7 +27,6 @@ public class ShootingPatrolAI : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Transform>();
         canPatrol = true;
         canShoot = true;
-        isFacingLeft = true;
         enemyShot = GameObject.Find("EnemyShot").GetComponent<GameObject>();
     
     }
@@ -39,20 +38,30 @@ public class ShootingPatrolAI : MonoBehaviour
         if (distToPlayer <= range)
         {
             //if the player is on the side enemy is not facing, flip to face player
-            if (player.transform.position.x > transform.position.x && isFacingLeft
-                || player.transform.position.x < transform.position.x && !isFacingLeft)
+            if (player.transform.position.x < transform.position.x && isFacingLeft == false)
             {
-                Flip();
+                shootPoint.rotation = new Quaternion(0, 1, 0, 0);
+                transform.localScale = new Vector3(1, 1, 1);
+                isFacingLeft = true;
             }
+
+            if(player.transform.position.x > transform.position.x && isFacingLeft == true)
+            {
+                shootPoint.rotation = new Quaternion(0, 0, 0, 0);
+                transform.localScale = new Vector3(-1, 1, 1);
+                isFacingLeft = false;
+            }
+
             canPatrol = false;
+            animator.SetBool("isShooting", true);
             rb.velocity = Vector2.zero;
             if(canShoot == true)
             StartCoroutine(Shoot());
-            animator.SetBool("isShooting", false);
         }
         else
         {
             canPatrol = true;
+            animator.SetBool("isShooting", false);
         }
         if (canPatrol == true)
         {
@@ -96,13 +105,10 @@ public class ShootingPatrolAI : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             isFacingLeft = true;
         }
-
     }
-
     IEnumerator Shoot()
     {
         canShoot = false;
-        animator.SetBool("isShooting", true);
         yield return new WaitForSeconds(shootCooldown);
         GameObject newEnemyShot = Instantiate(enemyShot, shootPoint.position, shootPoint.rotation);
         newEnemyShot.GetComponent<Rigidbody2D>().velocity = new Vector2(shotSpeed * speed * Time.fixedDeltaTime, 0f);

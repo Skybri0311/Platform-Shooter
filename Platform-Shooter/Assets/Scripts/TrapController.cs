@@ -20,10 +20,10 @@ public class TrapController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Trapped");
             lifeCounter.LoseLife();
-            levelController.Respawn();
             timer.ResetTimer();
+            Debug.Log("Trapped");
+            levelController.Respawn();
         }
     }
 }
