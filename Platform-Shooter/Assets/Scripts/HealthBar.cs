@@ -8,20 +8,27 @@ public class HealthBar : MonoBehaviour
     public Image fillBar;
     public float health;
     public bool isDead = false;
+    private bool isEnemyShot = false;
     
     private LifeCounter lifeCounter;
     private LevelController levelController;
     private Enemy enemy_damage;
-
+    private EnemyShot enemyShot;
+    private ScoreCounter scoreCounter;
     private void Awake()
     {
         lifeCounter = FindObjectOfType<LifeCounter>();
         levelController = FindObjectOfType<LevelController>();
         enemy_damage = FindObjectOfType<Enemy>();
+        enemyShot = FindObjectOfType<EnemyShot>();
+        scoreCounter = FindObjectOfType<ScoreCounter>();
     }
+
 
     public void LoseHealth()
     {
+        if (isEnemyShot)
+            health -= enemyShot.eDamage;
         //Reduce the health
         health -= enemy_damage.damage;
         Debug.Log("Health" + health);
@@ -63,5 +70,21 @@ public class HealthBar : MonoBehaviour
             lifeCounter.AddLife();
         }
         Debug.Log(hitInfo.name);
+
+        ScoreGem scoreGem = hitInfo.GetComponent<ScoreGem>();
+        if(scoreGem != null)
+        {
+            scoreCounter.isScoreGem = true;
+            scoreCounter.AddScore();
+        }
+
+        EnemyShot enemyShot = hitInfo.GetComponent<EnemyShot>();
+        if (enemyShot != null)
+        {
+            isEnemyShot = true;
+;
+        }
+        Debug.Log(hitInfo.name);
+ 
     }
 }
